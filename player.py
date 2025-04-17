@@ -7,6 +7,10 @@ class Player(CircleShape):
 		super().__init__(x, y, PLAYER_RADIUS)
 		self.rotation = 0
 
+		if hasattr(Player, 'containers'):
+			for container in Player.containers:
+				container.add(self)
+
 # in the player class
 	def triangle(self):
 		forward = pygame.Vector2(0, 1).rotate(self.rotation)
@@ -31,7 +35,7 @@ class Player(CircleShape):
 			self.rotate(dt)
 		if keys[pygame.K_w]:
 			self.move(dt)
-		if keys[pygame.K_d]:
+		if keys[pygame.K_s]:
 			self.move(-dt)
 
 	def move(self, dt):
