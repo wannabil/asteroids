@@ -43,8 +43,7 @@ def main():
 				sys.exit()
 			for bullet in shoot:
 				if asteroid.collide(bullet):
-					bullet.kill()
-					asteroid.kill()
+					asteroid.split()
 					break
 		screen.fill((0,0,0))
 		for d in drawable:
