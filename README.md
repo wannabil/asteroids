@@ -9,7 +9,7 @@ Simple Asteroids game
 ### 1. Clone this repo
 
 ```bash
-git clone https://github.com/your-username/asteroids.git
+git clone https://github.com/wannabil/asteroids.git
 cd asteroids
 ```
 
